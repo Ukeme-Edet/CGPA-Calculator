@@ -10,26 +10,31 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo-section">
-                <img src="images/cgpa logo.png" alt="logo" class="logo">
+            <img src="images/cgpa logo.png" alt="logo" class="logo">
+            
+            <div class="header-text">
+                <h1>Welcome to CGPA Calculator</h1>
+                <p>Sign in to easily calculate your academic standing and monitor your academic journey</p> 
             </div>
-            <h1>Welcome to CGPA Calculator</h1>
-            <p>Sign in to easily calculate your academic standing and monitor your academic journey</p>
         </header>
 
         <form action="/action_page.php">
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="CPGACalculator@gmail.com" name="email" required>
+            <div class="form-input">
+                <label for="email"><b>Email</b>
+                    <input type="email" placeholder="CPGACalculator@gmail.com" name="email" required>
+                </label>
+                
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="***********" name="psw" required>
-
-            <button type="submit" class="login-cta"><b>Log in</b></button>
+                <label for="psw"><b>Password</b>
+                    <input type="password" placeholder="*******" name="psw" required>
+                </label>
+            </div>
+            <button type="submit" class="form-button"><b>Log in</b></button>
         </form>
 
         <div class="register">
             <p>Don't have an account ?</p>
-            <button type="submit" class="register-cta"><b>Register</b></button>
+            <button type="submit" class="register-button"><b>Register</b></button>
         </div>
     </div>
 </body>

@@ -8,44 +8,49 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container signup_container">
         <header>
-            <div class="logo-section">
-                <img src="images/cgpa logo.png" alt="logo" class="logo">
+            <img src="images/cgpa logo.png" alt="logo" class="logo">
+            
+            <div class="header-text">
+                <h1>Welcome to CGPA Calculator</h1>
+                <p>Create your account to easily calculate your academic standing and monitor your academic journey.</p> 
             </div>
-            <h1>Welcome to CGPA Calculator</h1>
-            <p>Create your account to easily calculate your academic standing and monitor your academic journey</p>
         </header>
+
         <form action="/action_page.php">
-            <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="CPGACalculator@gmail.com" name="email" required>
-            
-            <div class="input_text">
-                <div class="fname">
-                    <label for="first_name"><b>First name</b></label>
-                    <input type="text" placeholder="CGPA" name="first_name" required>
-                </div>
+            <div class="form-input">
+                <label for="email"><b>Email</b>
+                    <input type="email" placeholder="CPGACalculator@gmail.com" name="email" required>
+                </label>
                 
-                <div class="lname">
-                    <label for="last_name"><b>Last name</b></label>
-                    <input type="text" placeholder="Calculator" name="last_name" required>
+                <div class="fullname">
+                    <label for="first_name"><b>First name</b>
+                        <input type="text" placeholder="CPGA" name="first_name" required>
+                    </label>
+
+                    <label for="last_name"><b>Last name</b>
+                        <input type="text" placeholder="Calculator" name="last_name" required>
+                    </label>
+
                 </div>
-            </div>    
-            
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="***********" name="psw" required>
-            
 
-            <label for="confirm_psw"><b>Confirm Password</b></label>
-            <input type="password" placeholder="***********" name="confirm_psw" required>
+                <label for="psw"><b>Password</b>
+                    <input type="password" placeholder="*******" name="psw" required>
+                </label>
 
-            <button type="submit" class="login-cta"><b>Register</b></button>
+                <label for="confirm_psw"><b>Confirm password</b>
+                    <input type="password" placeholder="*******" name="confirm_psw" required>
+                </label>
+            </div>
+            <button type="submit" class="form-button"><b>Register</b></button>
         </form>
 
         <div class="register">
             <p>Already have an account ?</p>
-            <button type="submit" class="register-cta"><b>Sign in</b></button>
+            <button type="submit" class="register-button"><b>Sign in</b></button>
         </div>
+        
     </div>
     
 </body>
