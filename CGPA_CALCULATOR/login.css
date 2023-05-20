@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    background-color: rgb(158, 175, 227);
+}
+
+.container {
+    width: 70%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: white;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.logo {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+form{
+    width: 100%;
+}
+
+label {
+    font-size: 0.8rem;
+    width: 100%;
+    display: block;
+}
+
+input,
+.login-cta,
+.input_text {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 5px;
+    margin:5px 0 22px 0;
+    border-radius: 10px;
+    border: 1px solid;
+    display: inline-block;
+}
+
+.input_text {
+    padding: 0;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.login-cta {
+    cursor: pointer;
+    background-color: rgb(67, 67, 244);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.register {
+    margin-top: 0.7px;
+}
+.register p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-bottom: 0.7px;
+}
+button {
+    background-color: transparent;
+    padding: 10px;
+    margin: 10px 2px;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+
+
+
+
