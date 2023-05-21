@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA CALCULATOR</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Kanit:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/cgpa logo.png" alt="logo" class="logo">
+            <h1 class="welcome--text">Welcome to CGPA Calculator</h1>
+        </header>
+        <form class="form" id="login">
+            <p class="form__intro ">Sign in to easily calculate your academic standing and monitor your academic journey</p>
+            
+            <div class="form__input-group">
+                <input type="email" class="form__input" autofocus placeholder="CgPacalaulator@email.com">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="*******">
+                <div class="form__input-error-message"></div>
+            </div>
+
+            <div class="form__message form__message--error"></div>
+            <button class="form__button" type="submit">Log in</button>
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+
+        <form class="form form--hidden" id="createAccount">
+            <p class="form__intro ">Create your account to easily calculate your academic standing and monitor your academic journey</p>
+
+            <div class="form__input-group">
+                <input type="email" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+            </div>
+
+            <div class="fullname">
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="First name">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Last name">
+                    <div class="form__input-error-message"></div>
+                </div>
+            </div>
+
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                <div class="form__input-error-message"></div>
+            </div>
+
+            <div class="form__message form__message--error"></div>
+            <button class="form__button" type="submit">Register</button>
+            
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
