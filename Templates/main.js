@@ -39,11 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setFormMessage(loginForm, "error", "Invalid username/password!");
     });
-
+    
     document.querySelectorAll(".form__input").forEach(inputElement => {
+        password = document.getElementById("signuppassword")
         inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupPassword" &&  e.target.value.length < 10) {
-                setInputError(inputElement, "Password must be atleast 10 characters in length");
+            if (e.target.id === "signupconfirmpassword" &&  e.target.value != password.value) {
+                setInputError(inputElement, "Password did not match");
             }
         });
 
@@ -51,4 +52,34 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInputError(inputElement);
         })
     });
+
+    var pass = document.getElementById("signuppassword");
+    var msg = document.getElementById("message");
+    var str = document.getElementById("strength");
+
+    pass.addEventListener("input", () => {
+        if(pass.value.length > 0){
+            msg.style.display = "block";
+        }
+        else{
+            msg.style.display = "none";
+        }
+        if(pass.value.length < 4){
+            str.innerHTML = "weak";
+            pass.style.borderColor = "#cc3333";
+            msg.style.color = "#cc3333";
+        }
+        else if(pass.value.length >= 4 && pass.value.length < 8){
+            str.innerHTML = "medium";
+            pass.style.borderColor = "#252c6a";
+            msg.style.color = "#252c6a";
+        }
+        else if(pass.value.length >= 8){
+            str.innerHTML = "strong";
+            pass.style.borderColor = "#0052FC";
+            msg.style.color = "#0052FC";
+        }
+    });
 });
+
+
