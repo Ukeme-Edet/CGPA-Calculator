@@ -26,6 +26,8 @@ body {
     width: 100%;
 }
 
+/**************** SIDE BAR ********************/
+
 .navigation {
     position: fixed;
     width: 300px;
@@ -138,7 +140,7 @@ body {
     pointer-events: none;
 }
 
-/* main */
+/**************** MAIN SECTION *********************/
 .main {
     position: absolute;
     width: calc(100% - 300px);
@@ -147,7 +149,7 @@ body {
     background: var(--white);
     transition: 0.5s;
 }
-
+/***************** TOP BAR SECTION ******************/
 .topbar {
     width: 100%;
     height: 72px;
@@ -274,3 +276,66 @@ body {
     text-align: center;
     color: #344054;
 }
+
+/************* MIDDLE BAR **************/
+.middlebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 24px;
+    gap: 132px;
+    position: absolute;
+    height: 48px;
+    top: 139px;
+}
+.academic-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 489px;
+}
+
+.admission-mode,
+.semester {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 16px;
+    border-radius: 8px;
+}
+.admission-mode {
+    width: 266px;;
+}
+
+.semester {
+    width: 207px;
+}
+
+.admission-mode label,
+.admission-mode option,
+.semester label,
+.semester option {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #344054;
+}
+.admission-mode select,
+.semester select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    gap: 12px;
+    width: 101px;
+    height: 32px;
+    background: #f2f4f7;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+}
+
