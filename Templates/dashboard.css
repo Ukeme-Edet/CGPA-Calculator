@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --text-color: #FCFCFD;
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #101828;
+    --black1: #222;
+    --black2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    color: var(--grey);
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--grey);
+    border-left: 10px solid var(--grey);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background: var(--text-color);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--grey);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.7em;
+}
+
+.navigation img {
+    width: 2em;
+    height: 2em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li a .logo-title {
+    margin-top: 10px;
+}
+
+/* curve outside */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--text-color);
+    pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--text-color);
+    pointer-events: none;
+}
+
+/* main */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.topbar {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 24px 16px;
+    gap: 151px;
+    position: absolute;
+    top: 19px;
+    font-size: 18px;
+    border-bottom: 1px solid #d0d5dd;
+}
+
+.topbar--left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 111px;
+    height:56px;
+    gap: 4px;
+}
+
+.welcome--note {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #475467;
+}
+
+.welcome--user {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #1D2939;
+}
+
+.topbar--right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 32;
+    width: 410px;
+    height: 48px;
+}
+
+.session-con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 0px;
+    gap: 16px;
+    width: 223px;
+}
+
+.session-con label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #344054;
+}
+
+.session--year {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    gap: 12px;
+    width: 120px;
+    height: 32px;
+    background: #f2f4f7;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+}
+
+.session--year option {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #344054;
+}
+
+.calendar-con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 12px;
+    width: 155px;
+    height: 40px;
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+}
+.calendar-con .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.calendar-con .line {
+    width: 3px;
+    height: 16px;
+    background: #D0D5DD;
+}
+.calendar-con .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 9px;
+    width: 74px;
+    height: 24px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #344054;
+}

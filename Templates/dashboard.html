@@ -4,32 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dshboard</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kanit:wght@500&display=swap" rel="stylesheet">
 
 </head>
 <body>
-   <div class="dark-background">
-    <div class="nav-header">
-        <div class="nav-logo">
-            <img src="./images/cgpa logo.png" alt="">
-            <span>CGPA Calculator</span>
-        </div>
-        <div class="nav-list">
+    <div class="container">
+        <div class="navigation">
             <ul>
-                <li>Overview</li>
-                <li>Courses</li>
-                <li>Analytics</li>
-                <li>Settings</li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="images/cgpa logo.png" alt=""></span>
+                        <span class="logo-title">CGPA Calculator</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
+                        <span class="title">Overview</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                        <span class="title">Analytics</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Log Out</span>
+                    </a>
+                </li>
             </ul>
         </div>
+
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="topbar--left">
+                    <p class="welcome--note">Welcome back</p>
+                    <p class="welcome--user">Emeka Beer</p>
+                </div>
+                <div class="topbar--right">
+                    <div class="session-con">
+                        <label for="session">Session</label>
+                        <select name="session" id="" class="session--year">
+                            <option value="2021/2022">2021/2022</option>
+                            <option value="2021/2022">2021/2022</option>
+                            <option value="2021/2022">2021/2022</option>
+                            <option value="2021/2022">2021/2022</option>
+                            <option value="2021/2022">2021/2022</option>
+                        </select>
+                    </div>
+                    <div class="calendar-con">
+                        <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <div class="line"></div>
+                        <div class="title">23/05/23</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="down">
-        <img src="" alt="">
-        <h3>Emeka Bear</h3>
-        <p><a href="#">Emekabeer@gmail.com</a></p>
-        <!--arrow icon-->
-    </div>
-   </div>
-   <div class="white-background"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./dashboard.js"></script>
 </body>
 </html>
