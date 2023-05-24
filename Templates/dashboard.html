@@ -12,60 +12,57 @@
 <body>
     <div class="container">
         <div class="navigation">
-            <ul>
-                <li>
-                    <a href="#">
-                        <span class="icon"><img src="images/cgpa logo.png" alt=""></span>
-                        <span class="logo-title">CGPA Calculator</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
-                        <span class="title">Overview</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
-                        <span class="title">Courses</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
-                        <span class="title">Analytics</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                        <span class="title">Settings</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <span class="title">Password</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title">Log Out</span>
-                    </a>
-                </li>
-            </ul>
+            <div class="navigation-con">
+                <div class="navigation-logo">    
+                    <img src="images/cgpa logo.png" alt="logo">
+                    <p>CGPA Calculator</p>    
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
+                            <span class="title">Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                            <span class="title">Courses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                            <span class="title">Analytics</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                            <span class="title">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <span class="title">Password</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Log Out</span>
+                        </a>
+                    </li>
+                </ul>    
+            </div>
         </div>
 
         <!-- main -->
         <div class="main">
             <div class="topbar">
-                <div class="topbar--left">
-                    <p class="welcome--note">Welcome back</p>
-                    <p class="welcome--user">Emeka Beer</p>
-                </div>
+                <p class="welcome-note">Welcome <span class="welcome-name">Emeka</span></p>
                 <div class="topbar--right">
                     <div class="session-con">
                         <label for="session">Session</label>
@@ -80,7 +77,7 @@
                     <div class="calendar-con">
                         <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
                         <div class="line"></div>
-                        <div class="title">23/05/23</div>
+                        <div class="date">23/05/23</div>
                     </div>
                 </div>
             </div>
@@ -104,8 +101,20 @@
                         </select>
                     </div>
                 </div>
+                <div class="add-edit-course">
+                    <button class="form__button add-course_button"><a href="">Add course</a></button>
+                    <button class="form__button edit-course_button"><a href="">Edit course</a></button>
+                </div>
             </div>
-            
+            <div class="lastbar">
+                <div class="lastbar-container">
+                    <div class="lastbar-text">
+                        <div class="course-logo"><ion-icon name="book-outline"></ion-icon></div>
+                        <p>Add your courses to get started</p>
+                    </div>
+                    <button class="form__button" type=""><a href="">Add a course</a></button>
+                </div>
+            </div>            
         </div>
     </div>
 

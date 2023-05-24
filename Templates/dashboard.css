@@ -14,306 +14,153 @@
     --black2: #999;
 }
 
-body {
-    min-height: 100vh;
-    overflow: hidden;
-    color: var(--grey);
-
-}
-
 .container {
     position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #FFFFFF;
+}
+
+.form__button {
     width: 100%;
+    padding: 1rem 2rem; 
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    background: #0052FC;
 }
 
-/**************** SIDE BAR ********************/
-
-.navigation {
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    background: var(--grey);
-    border-left: 10px solid var(--grey);
-    transition: 0.5s;
-    overflow: hidden;
-}
-
-.navigation ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.navigation ul li {
-    position: relative;
-    width: 100%;
-    list-style: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-.navigation ul li:hover,
-.navigation ul li.hovered {
-    background: var(--text-color);
-}
-
-.navigation ul li:nth-child(1) {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    pointer-events: none;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.navigation ul li a {
-    position: relative;
-    display: block;
-    width: 100%;
-    display: flex;
+.form__button a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
     text-decoration: none;
-    color: var(--text-color);
 }
 
-.navigation ul li:hover a,
-.navigation ul li.hovered a {
-    color: var(--grey);
+.form__button:hover {
+    background-color: #4a78d5;
 }
 
-.navigation ul li a .icon {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 70px;
-    text-align: center;
+.form__button:active {
+    transform: scale(0.98);
 }
-
-.navigation ul li a .icon ion-icon {
-    font-size: 1.7em;
-}
-
-.navigation img {
-    width: 2em;
-    height: 2em;
-}
-
-.navigation ul li a .title {
-    position: relative;
-    display: block;
-    padding: 0 10px;
-    height: 60px;
-    line-height: 60px;
-    text-align: start;
-    white-space: nowrap;
-}
-
-.navigation ul li a .logo-title {
-    margin-top: 10px;
-}
-
-/* curve outside */
-.navigation ul li:hover a::before,
-.navigation ul li.hovered a::before {
-    content: '';
+.navigation {
+    padding: 24px;
     position: absolute;
-    right: 0;
-    top: -50px;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--text-color);
-    pointer-events: none;
+    width: 25%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #101828;
 }
-.navigation ul li:hover a::after,
-.navigation ul li.hovered a::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -50px;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--text-color);
-    pointer-events: none;
-}
-
-/**************** MAIN SECTION *********************/
-.main {
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    min-height: 100vh;
-    background: var(--white);
-    transition: 0.5s;
-}
-/***************** TOP BAR SECTION ******************/
-.topbar {
-    width: 100%;
-    height: 72px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0 24px 16px;
-    gap: 151px;
-    position: absolute;
-    top: 19px;
-    font-size: 18px;
-    border-bottom: 1px solid #d0d5dd;
-}
-
-.topbar--left {
+.navigation-con {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    width: 111px;
-    height:56px;
-    gap: 4px;
+    height: 372px;
+}
+.navigation-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 8px;
+}
+.navigation-logo img {
+    width: 32px;
+    height: 32px;
+}
+.navigation-logo p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    color: #FCFCFD;
+}
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 28px;
+    width: 100%;
+    margin-top: 80px;
+}
+.navigation ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 8px;
+}
+.navigation ul li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #FCFCFD;
+    padding: 0px;
+    gap: 12px;
+    height: 24px;
+}
+.navigation ul li a .icon ion-icon {
+    width: 24px;
+    height: 24px; 
+}
+.navigation ul li p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px
+}
+.navigation ul li:hover {
+    width: 100%;
+    background: #1D2939;
+    border: 1px solid #667085;
+    border-radius: 8px;
 }
 
-.welcome--note {
-    font-weight: 400;
-    font-size: 16px;
+/***************** TOP BAR SECTION ******************/
+.main {
+    position: absolute;
+    top: 0px;
+    left: 359px;
+    width: 75%; 
+}
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding: 5px 24px;
+    border-bottom: 1px solid #d0d5dd;
+}
+.welcome-note {
+    font-weight: 550;
+    font-size: 18px;
     line-height: 24px;
     text-align: center;
     color: #475467;
 }
-
-.welcome--user {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: center;
-    color: #1D2939;
-}
-
 .topbar--right {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 32;
-    width: 410px;
-    height: 48px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
 }
-
 .session-con {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 8px 0px;
     gap: 16px;
-    width: 223px;
 }
-
-.session-con label {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #344054;
-}
-
-.session--year {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 12px;
-    gap: 12px;
-    width: 120px;
-    height: 32px;
-    background: #f2f4f7;
-    border: 1px solid #d0d5dd;
-    border-radius: 8px;
-}
-
-.session--year option {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #344054;
-}
-
-.calendar-con {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 16px;
-    gap: 12px;
-    width: 155px;
-    height: 40px;
-    border: 1px solid #eaecf0;
-    border-radius: 8px;
-}
-.calendar-con .icon {
-    width: 24px;
-    height: 24px;
-}
-
-.calendar-con .line {
-    width: 3px;
-    height: 16px;
-    background: #D0D5DD;
-}
-.calendar-con .date {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 9px;
-    width: 74px;
-    height: 24px;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: center;
-    color: #344054;
-}
-
-/************* MIDDLE BAR **************/
-.middlebar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 24px;
-    gap: 132px;
-    position: absolute;
-    height: 48px;
-    top: 139px;
-}
-.academic-details {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-    width: 489px;
-}
-
-.admission-mode,
-.semester {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px;
-    gap: 16px;
-    border-radius: 8px;
-}
-.admission-mode {
-    width: 266px;;
-}
-
-.semester {
-    width: 207px;
-}
-
+.session-con label,
+.session--year option,
+.calendar-con .date,
 .admission-mode label,
 .admission-mode option,
 .semester label,
@@ -324,18 +171,122 @@ body {
     text-align: center;
     color: #344054;
 }
+.session--year,
+.calendar-con,
 .admission-mode select,
-.semester select {
+.semester select  {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 4px 12px;
-    gap: 12px;
-    width: 101px;
-    height: 32px;
     background: #f2f4f7;
     border: 1px solid #d0d5dd;
     border-radius: 8px;
+    height: 32px;
+}
+.session--year {
+    padding: 4px 8px;
+}
+.calendar-con {
+    padding: 8px;
+}
+.calendar-con .icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+}
+.calendar-con .line {
+    width: 1px;
+    height: 16px;
+    background: #D0D5DD;
+}
+.calendar-con .date {
+    padding-left: 5px;
+}
+
+/************* MIDDLE BAR **************/
+.middlebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    margin: 32px 0px;
+    padding: 0px 24px;
+}
+.academic-details,
+.add-edit-course {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.add-course_button,
+.edit-course_button {
+    display: none;
+    width: 153px;
+    height: 44px;
+    padding: 10px 32px;
+}
+.add-course_button a,
+.edit-course_button a {
+    font-size: 16px;
+}
+.admission-mode,
+.semester {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 16px;
+}
+
+.admission-mode select,
+.semester select {
+    padding: 4px 12px;
+}
+
+/****** Last bar ***********/
+.lastbar-container {
+    position: absolute;
+    top: 349px;
+    left: 40%;
+    width: 265px;
+    height: 295px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 16px;
+    gap: 24px;
+    background: #FCFCFD;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.lastbar-text {
+    margin: auto;
+    width: 180px;
+    height: 179px;
+}
+
+.course-logo ion-icon {
+    width: 120px;
+    height: 120px;
+    color: #287bff;
+}
+
+.lastbar-text p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #475467;
+    height: 48px;
 }
 
