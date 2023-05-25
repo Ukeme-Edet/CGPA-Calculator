@@ -224,14 +224,22 @@
 }
 .add-course_button,
 .edit-course_button {
-    display: none;
     width: 153px;
     height: 44px;
     padding: 10px 32px;
 }
+.edit-course_button {
+    background: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+}
 .add-course_button a,
 .edit-course_button a {
     font-size: 16px;
+    font-weight: 500;
+}
+.edit-course_button a {
+    color: #344054;
 }
 .admission-mode,
 .semester {
@@ -248,7 +256,7 @@
 }
 
 /****** Last bar ***********/
-.lastbar-container {
+.lastbar-addCourse-container {
     position: absolute;
     top: 349px;
     left: 40%;
@@ -289,4 +297,78 @@
     color: #475467;
     height: 48px;
 }
+
+.table-box {
+    width: 100%;
+    height: 620px;
+    padding: 0px 24px;
+}
+.table-box table {
+    width: 100%;
+}
+.table-box table tr th {
+    padding: 16px 12px;
+    font-size: 18px;
+    text-align: center;
+}
+.table-box table tr td {
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 16px 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+tr:nth-child(even) {
+    background-color: rgb(208, 213, 221, 0.4);
+}
+
+/******* ADD FORM SECTION ****/
+.addCourseform {
+    width: 40%;
+    margin-left: 100px;
+    padding: 2rem 1rem;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inser 0px -1px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    background: #ffffff;
+}
+.logo-section .course-logo ion-icon {
+    width: 26px;
+    height: 26px;
+}
+.header-section .logo-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 42%;
+}
+.header-section p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 10px;
+}
+.addCourseform input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.course-code-unit {  
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 16px;
+    
+}
+
 

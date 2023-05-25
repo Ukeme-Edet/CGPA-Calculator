@@ -107,12 +107,58 @@
                 </div>
             </div>
             <div class="lastbar">
-                <div class="lastbar-container">
+                <div class="lastbar-addCourse-container form--hidden">
                     <div class="lastbar-text">
                         <div class="course-logo"><ion-icon name="book-outline"></ion-icon></div>
                         <p>Add your courses to get started</p>
                     </div>
                     <button class="form__button" type=""><a href="">Add a course</a></button>
+                </div>
+                <div class="table-box form--hidden">
+                    <table>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Course code</th>
+                            <th>Course title</th>
+                            <th>Course unit</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>mth456</td>
+                            <td>enginerring and calculation</td>
+                            <td>4</td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="add-form-section">
+                    <form class="addCourseform" id="addCourseForm" method="get">
+                        <div class="header-section">
+                            <div class="logo-section">
+                                <div class="course-logo"><ion-icon name="book-outline"></ion-icon></div>
+                                <div class="close-logo"><ion-icon name="close-outline"></ion-icon></div>
+                            </div>
+                            <p class="form__intro ">Add course</p>
+                        </div>
+                        
+                        <label for="course-title" class="course-title">Course <input type="text" class="form__input" name="course-title" placeholder="welding and fabrication"></label>
+                        
+                        
+            
+                        <div class="course-code-unit">
+                            <label for="course-code" class="course-code">Course code</label>
+                            <input type="text" name="course-code" placeholder="MTH123"> 
+                    
+                            <label for="course-unit" class="course-unit">Course unit</label>
+                            <input type="number" name="course-unit" placeholder="1">                       
+                        </div>
+            
+                        <label for="grade" class="grade">Grade</label>
+                        <input type="text" name="grade" placeholder="A">
+                        
+                        <button class="form__button" type="submit"><a href="./dashboard.html">Register</a></button>
+                    </form>
                 </div>
             </div>            
         </div>
