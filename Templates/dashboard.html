@@ -10,14 +10,14 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container Register">
         <div class="navigation">
             <div class="navigation-con">
                 <div class="navigation-logo">    
                     <img src="images/cgpa logo.png" alt="logo">
                     <p>CGPA Calculator</p>    
                 </div>
-                <ul>
+                <ul class="navigation-list">
                     <li>
                         <a href="#">
                             <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
@@ -64,9 +64,9 @@
             <div class="topbar">
                 <p class="welcome-note">Welcome <span class="welcome-name">Emeka</span></p>
                 <div class="topbar--right">
-                    <div class="session-con">
+                    <div class="session-container">
                         <label for="session">Session</label>
-                        <select name="session" id="" class="session--year">
+                        <select name="session" id="" class="session-year">
                             <option value="2021/2022">2021/2022</option>
                             <option value="2021/2022">2021/2022</option>
                             <option value="2021/2022">2021/2022</option>
@@ -74,8 +74,8 @@
                             <option value="2021/2022">2021/2022</option>
                         </select>
                     </div>
-                    <div class="calendar-con">
-                        <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <div class="calendar-container">
+                        <img class="icon" src="./images/calendar.png" alt="">
                         <div class="line"></div>
                         <div class="date">23/05/23</div>
                     </div>
@@ -101,19 +101,12 @@
                         </select>
                     </div>
                 </div>
-                <div class="add-edit-course">
-                    <button class="form__button add-course_button"><a href="">Add course</a></button>
-                    <button class="form__button edit-course_button"><a href="">Edit course</a></button>
+                <div class="add-edit-course form--hidden">
+                    <button class="add-course-button"><a href="">Add course</a></button>
+                    <button class="edit-course-button"><a href="">Edit course</a></button>
                 </div>
             </div>
             <div class="lastbar">
-                <div class="lastbar-addCourse-container form--hidden">
-                    <div class="lastbar-text">
-                        <div class="course-logo"><ion-icon name="book-outline"></ion-icon></div>
-                        <p>Add your courses to get started</p>
-                    </div>
-                    <button class="form__button" type=""><a href="">Add a course</a></button>
-                </div>
                 <div class="table-box form--hidden">
                     <table>
                         <tr>
@@ -132,33 +125,41 @@
                         </tr>
                     </table>
                 </div>
-                <div class="add-form-section">
-                    <form class="addCourseform" id="addCourseForm" method="get">
-                        <div class="header-section">
-                            <div class="logo-section">
-                                <div class="course-logo"><ion-icon name="book-outline"></ion-icon></div>
-                                <div class="close-logo"><ion-icon name="close-outline"></ion-icon></div>
+                <div class="add-form-section form--hidden">
+                    <div class="addCourseform" id="addCourseForm" method="get">
+                        <div class="add-course-form-header">
+                            <img class="logo" src="./images/book logo.png" alt="">
+                            <h1 class="welcome--text">Add Courses</h1>
+                        </div>
+                        <form action="">
+                            <div class="form__input-group">
+                                <input type="text" name="course-title" class="form__input" autofocus placeholder="Course title">    
                             </div>
-                            <p class="form__intro ">Add course</p>
+                            <div class="fullname">
+                                <div class="form__input-group">
+                                    <input type="text" name="course-code" class="form__input" autofocus placeholder="Course code">
+                                </div>
+
+                                <div class="form__input-group">
+                                    <input type="number" name="course-unit" class="form__input" autofocus placeholder="Course unit ">
+                                </div>
+                            </div>
+                            <div class="form__input-group">
+                                <input type="text" name="Grade" class="form__input" autofocus placeholder="Grade">    
+                            </div>
+                            <button class="form__button" type="submit"><a href="">Add course</a></button>
+                        </form>
+                        <div>
+                            <img class="close-circle" src="./images/closed.png.png" alt="close-icon">
                         </div>
-                        
-                        <label for="course-title" class="course-title">Course <input type="text" class="form__input" name="course-title" placeholder="welding and fabrication"></label>
-                        
-                        
-            
-                        <div class="course-code-unit">
-                            <label for="course-code" class="course-code">Course code</label>
-                            <input type="text" name="course-code" placeholder="MTH123"> 
-                    
-                            <label for="course-unit" class="course-unit">Course unit</label>
-                            <input type="number" name="course-unit" placeholder="1">                       
-                        </div>
-            
-                        <label for="grade" class="grade">Grade</label>
-                        <input type="text" name="grade" placeholder="A">
-                        
-                        <button class="form__button" type="submit"><a href="./dashboard.html">Register</a></button>
-                    </form>
+                    </div>
+                </div>
+                <div class="lastbar-addCourse-container">
+                    <div class="lastbar-text">
+                        <div class="course-logo"><ion-icon name="book-outline"></ion-icon></div>
+                        <p>Add your courses to get started</p>
+                    </div>
+                    <button class="form__button" type=""><a href="">Add a course</a></button>
                 </div>
             </div>            
         </div>
