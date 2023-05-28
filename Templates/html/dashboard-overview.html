@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kanit:wght@500&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <div class="container Register">
+    <div class="container" id="container">
         <div class="navigation">
             <div class="navigation-con">
                 <div class="navigation-logo">    
-                    <img src="images/cgpa logo.png" alt="logo">
+                    <img src="../images/cgpa logo.png" alt="logo">
                     <p>CGPA Calculator</p>    
                 </div>
                 <ul class="navigation-list">
                     <li>
-                        <a href="#">
+                        <a href="#" id="current">
                             <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
                             <span class="title">Overview</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="../html/dashboard-courses.html">
                             <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
                             <span class="title">Courses</span>
                         </a>
@@ -75,7 +75,7 @@
                         </select>
                     </div>
                     <div class="calendar-container">
-                        <img class="icon" src="./images/calendar.png" alt="">
+                        <img class="icon" src="../images/calendar.png" alt="">
                         <div class="line"></div>
                         <div class="date">23/05/23</div>
                     </div>
@@ -101,14 +101,14 @@
                         </select>
                     </div>
                 </div>
-                <div class="add-edit-course form--hidden">
-                    <button class="add-course-button"><a href="">Add course</a></button>
-                    <button class="edit-course-button"><a href="">Edit course</a></button>
+                <div class="add-edit-course form--hidden" id="addEditCourseBtn">
+                    <button class="add-course-button add-course-btn" id="middblebarAddCourseBtn"><a href="">Add course</a></button>
+                    <button class="edit-course-button add-course-btn" id="middblebarEditCourseBtn"><a href="">Edit course</a></button>
                 </div>
             </div>
             <div class="lastbar">
-                <div class="table-box form--hidden">
-                    <table>
+                <div class="table-box form--hidden" id="courseTable">
+                    <table id="tb1" class="table">
                         <tr>
                             <th>S/N</th>
                             <th>Course code</th>
@@ -116,50 +116,44 @@
                             <th>Course unit</th>
                             <th>Grade</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>mth456</td>
-                            <td>enginerring and calculation</td>
-                            <td>4</td>
-                            <td>A</td>
-                        </tr>
+                        
                     </table>
                 </div>
-                <div class="add-form-section form--hidden">
-                    <div class="addCourseform" id="addCourseForm" method="get">
+                <div class="add-form-section form--hidden" id="addCourseForm">
+                    <div class="addCourseform" method="get">
                         <div class="add-course-form-header">
-                            <img class="logo" src="./images/book logo.png" alt="">
+                            <img class="logo" src="../images/book logo.png" alt="">
                             <h1 class="welcome--text">Add Courses</h1>
                         </div>
-                        <form action="">
+                        <form method="POST" action="" name="sample">
                             <div class="form__input-group">
-                                <input type="text" name="course-title" class="form__input" autofocus placeholder="Course title">    
+                                <input type="text" name="courseTitle" class="form__input" autofocus placeholder="Course title">    
                             </div>
                             <div class="fullname">
                                 <div class="form__input-group">
-                                    <input type="text" name="course-code" class="form__input" autofocus placeholder="Course code">
+                                    <input type="text" name="courseCode" class="form__input" autofocus placeholder="Course code">
                                 </div>
 
                                 <div class="form__input-group">
-                                    <input type="number" name="course-unit" class="form__input" autofocus placeholder="Course unit ">
+                                    <input type="number" name="courseUnit" class="form__input" autofocus placeholder="Course unit ">
                                 </div>
                             </div>
                             <div class="form__input-group">
-                                <input type="text" name="Grade" class="form__input" autofocus placeholder="Grade">    
+                                <input type="text" name="courseGrade" class="form__input" autofocus placeholder="Grade">    
                             </div>
-                            <button class="form__button" type="submit"><a href="">Add course</a></button>
+                            <button class="form__button" id="addCourseFormBtn" type="submit" onclick="addCourse();"><a>Add course</a></button>
                         </form>
                         <div>
-                            <img class="close-circle" src="./images/closed.png.png" alt="close-icon">
+                            <img class="close-circle" src="../images/closed.png.png" alt="close-icon">
                         </div>
                     </div>
                 </div>
-                <div class="lastbar-addCourse-container">
+                <div class="lastbar-addCourse-container" id="addCourseContainer">
                     <div class="lastbar-text">
                         <div class="course-logo"><ion-icon name="book-outline"></ion-icon></div>
                         <p>Add your courses to get started</p>
                     </div>
-                    <button class="form__button" type=""><a href="">Add a course</a></button>
+                    <button class="form__button" id="addCourseBtn" type="submit"><a href="">Add a course</a></button>
                 </div>
             </div>            
         </div>
@@ -167,6 +161,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./dashboard.js"></script>
+    <script src="../JS/dashboard.js"></script>
 </body>
 </html>
