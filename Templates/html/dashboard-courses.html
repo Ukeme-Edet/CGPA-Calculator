@@ -1,136 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kanit:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../JS/dashboard.js" defer></script>
+    </head>
+    <body>
+        <div class="container Register">
+            <div class="navigation">
+                <div class="navigation-con">
+                    <div class="navigation-logo">
+                        <img src="../images/cgpa logo.png" alt="logo" />
+                        <p>CGPA Calculator</p>
+                    </div>
+                    <ul class="navigation-list">
+                        <li>
+                            <a href="../html/dashboard-overview.html">
+                                <span class="icon"
+                                    ><ion-icon name="apps-outline"></ion-icon
+                                ></span>
+                                <span class="title">Overview</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="#current">
+                                <span class="icon"
+                                    ><ion-icon name="book-outline"></ion-icon
+                                ></span>
+                                <span class="title">Courses</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"
+                                    ><ion-icon
+                                        name="bar-chart-outline"
+                                    ></ion-icon
+                                ></span>
+                                <span class="title">Analytics</span>
+                            </a>
+                        </li>
 
-</head>
-<body>
-    <div class="container Register">
-        <div class="navigation">
-            <div class="navigation-con">
-                <div class="navigation-logo">    
-                    <img src="../images/cgpa logo.png" alt="logo">
-                    <p>CGPA Calculator</p>    
+                        <li>
+                            <a href="#">
+                                <span class="icon"
+                                    ><ion-icon
+                                        name="settings-outline"
+                                    ></ion-icon
+                                ></span>
+                                <span class="title">Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"
+                                    ><ion-icon
+                                        name="lock-closed-outline"
+                                    ></ion-icon
+                                ></span>
+                                <span class="title">Password</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"
+                                    ><ion-icon name="log-out-outline"></ion-icon
+                                ></span>
+                                <span class="title">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="navigation-list">
-                    <li>
-                        <a href="../html/dashboard-overview.html">
-                            <span class="icon"><ion-icon name="apps-outline"></ion-icon></span>
-                            <span class="title">Overview</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="#current">
-                            <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
-                            <span class="title">Courses</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
-                            <span class="title">Analytics</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">
-                            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                            <span class="title">Settings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                            <span class="title">Password</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                            <span class="title">Log Out</span>
-                        </a>
-                    </li>
-                </ul>    
+            </div>
+
+            <!-- main -->
+            <div class="main">
+                <div class="topbar">
+                    <p class="welcome-note">
+                        Welcome <span class="welcome-name">Emeka</span>
+                    </p>
+                    <div class="topbar--right">
+                        <div class="session-container">
+                            <label for="session">Session</label>
+                            <select name="session" id="" class="session-year">
+                                <option value="2021/2022">2021/2022</option>
+                                <option value="2021/2022">2021/2022</option>
+                                <option value="2021/2022">2021/2022</option>
+                                <option value="2021/2022">2021/2022</option>
+                                <option value="2021/2022">2021/2022</option>
+                            </select>
+                        </div>
+                        <div class="calendar-container">
+                            <img
+                                class="icon"
+                                src="../images/calendar.png"
+                                alt=""
+                            />
+                            <div class="line"></div>
+                            <div class="date">23/05/23</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="middlebar">
+                    <div class="academic-details">
+                        <div class="admission-mode">
+                            <label for="admission-mode">Admission mode</label>
+                            <select name="admission-mode" id="">
+                                <option value="UTME">UTME</option>
+                                <option value="DE">DE</option>
+                            </select>
+                        </div>
+                        <div class="semester">
+                            <label for="semester">Semester</label>
+                            <select name="semester" id="">
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="add-edit-course">
+                        <button
+                            class="add-course-button addCourseFormBtn"
+                            id="middblebarAddCourseBtn"
+                        >
+                            <a href="">Add course</a>
+                        </button>
+                        <button
+                            class="edit-course-button"
+                            id="middblebarEditCourseBtn"
+                        >
+                            <a href="">Edit course</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="lastbar">
+                    <div class="table-box">
+                        <table>
+                            <tr>
+                                <th>S/N</th>
+                                <th>Course code</th>
+                                <th>Course title</th>
+                                <th>Course unit</th>
+                                <th>Grade</th>
+                            </tr>
+                            <tr class="form--hidden">
+                                <td id="S/N"></td>
+                                <td id="user-course-code"></td>
+                                <td id="user-course-title"></td>
+                                <td id="user-course-code"></td>
+                                <td id="user-grade"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- main -->
-        <div class="main">
-            <div class="topbar">
-                <p class="welcome-note">Welcome <span class="welcome-name">Emeka</span></p>
-                <div class="topbar--right">
-                    <div class="session-container">
-                        <label for="session">Session</label>
-                        <select name="session" id="" class="session-year">
-                            <option value="2021/2022">2021/2022</option>
-                            <option value="2021/2022">2021/2022</option>
-                            <option value="2021/2022">2021/2022</option>
-                            <option value="2021/2022">2021/2022</option>
-                            <option value="2021/2022">2021/2022</option>
-                        </select>
-                    </div>
-                    <div class="calendar-container">
-                        <img class="icon" src="../images/calendar.png" alt="">
-                        <div class="line"></div>
-                        <div class="date">23/05/23</div>
-                    </div>
-                </div>
-            </div>
-            <div class="middlebar">
-                <div class="academic-details">
-                    <div class="admission-mode">
-                        <label for="admission-mode">Admission mode</label>
-                        <select name="admission-mode" id="">
-                            <option value="UTME">UTME</option>
-                            <option value="DE">DE</option>
-                        </select>
-                    </div>
-                    <div class="semester">
-                        <label for="semester">Semester</label>
-                        <select name="semester" id="">
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                            <option value="2020">2020</option>
-                            <option value="2019">2019</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="add-edit-course">
-                    <button class="add-course-button" id="middblebarAddCourseBtn"><a href="">Add course</a></button>
-                    <button class="edit-course-button" id="middblebarEditCourseBtn"><a href="">Edit course</a></button>
-                </div>
-            </div>
-            <div class="lastbar">
-                <div class="table-box">
-                    <table>
-                        <tr>
-                            <th>S/N</th>
-                            <th>Course code</th>
-                            <th>Course title</th>
-                            <th>Course unit</th>
-                            <th>Grade</th>
-                        </tr>
-                        <tr class="form--hidden">
-                            <td id="S/N"></td>
-                            <td id="user-course-code"></td>
-                            <td id="user-course-title"></td>
-                            <td id="user-course-code"></td>
-                            <td id="user-grade"></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>            
-        </div>
-    </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./dashboard.js"></script>
-</body>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
 </html>
