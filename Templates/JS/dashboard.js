@@ -5,14 +5,16 @@ const addCourseBackground = document.querySelector("#container");
 const addEditBtn = document.querySelector("#addEditCourseBtn");
 const courseTable = document.querySelector("#courseTable");
 
-document.querySelector("#addCourseBtn").addEventListener("click", () => {
-    addCourseContainer.classList.add("form--hidden");
-    addCourseForm.classList.remove("form--hidden");
-    addCourseBackground.classList.add("Register");
-    addEditBtn.classList.remove("form--hidden");
-});
+document
+    .querySelector("#middblebarAddCourseBtn")
+    .addEventListener("click", () => {
+        addCourseContainer.classList.add("form--hidden");
+        addCourseForm.classList.remove("form--hidden");
+        addCourseBackground.classList.add("Register");
+        addEditBtn.classList.remove("form--hidden");
+    });
 
-document.querySelector(".addCourseFormBtn").addEventListener("click", (e) => {
+document.querySelector("#addCourseFormBtn").addEventListener("click", (e) => {
     e.preventDefault();
     courseTable.classList.remove("form--hidden");
     addCourseForm.classList.add("form--hidden");

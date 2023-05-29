@@ -1,14 +1,14 @@
 * {
-    --text-color: #FCFCFD;
+    --text-color: #fcfcfd;
     --body-bg: #eeeff4;
-    --color-primary: #0052FC;
+    --color-primary: #0052fc;
     --color-primary-dark: #4a78d5;
     --color-secondary: #252c6a;
-    --border-radius: 4px;   
+    --border-radius: 4px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
 }
 a {
@@ -18,14 +18,15 @@ a {
     position: relative;
     width: 1440px;
     height: 1024px;
-    background: #FFFFFF;
+    background: #ffffff;
     color: var(--text-color);
 }
 
 .Register {
     position: absolute;
-    width: 1440px;
-    height: 1024px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     top: 0;
     left: 0;
     background: rgba(229, 233, 240, 0.4);
@@ -35,7 +36,7 @@ a {
     padding: 24px;
     position: absolute;
     width: 25%;
-    height: 100%;
+    height: 100vh;
     left: 0px;
     top: 0px;
     background-color: #101828;
@@ -92,17 +93,17 @@ a {
 }
 .navigation ul li a .icon ion-icon {
     width: 24px;
-    height: 24px; 
+    height: 24px;
 }
 .navigation ul li a .title {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #98A2B3;
+    color: #98a2b3;
 }
 .navigation ul li:hover {
     width: 100%;
-    background: #1D2939;
+    background: #1d2939;
     border: 1px solid #667085;
     border-radius: 8px;
 }
@@ -111,8 +112,8 @@ a {
 .main {
     position: absolute;
     top: 0px;
-    left: 359px;
-    width: 1081px; 
+    left: 25%;
+    width: 75%;
 }
 .topbar {
     display: flex;
@@ -128,7 +129,7 @@ a {
     font-size: 17px;
     line-height: 24px;
     text-align: center;
-    color: #1D2939;
+    color: #1d2939;
 }
 .topbar--right {
     display: flex;
@@ -182,7 +183,7 @@ a {
 .calendar-container .line {
     width: 1px;
     height: 16px;
-    background: #D0D5DD;
+    background: #d0d5dd;
 }
 /********** MIDDLE BAR ****************/
 .middlebar {
@@ -244,14 +245,14 @@ a {
 }
 .add-course-button {
     background: #0052fc;
-    border: 1px solid #0052FC;
+    border: 1px solid #0052fc;
 }
 .add-course-button a {
     color: #ffffff;
 }
 .edit-course-button {
-    background: #FFFFFF;
-    border: 1px solid #D0D5DD;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
 }
 .add-edit-course button:hover {
     background-color: var(--color-primary-dark);
@@ -261,7 +262,7 @@ a {
 }
 
 /************** LAST BAR *****************/
-    
+
 .form--hidden {
     display: none;
 }
@@ -293,7 +294,9 @@ a {
     color: #475467;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ccc;
     border-collapse: collapse;
 }
@@ -313,11 +316,12 @@ tr:nth-child(even) {
     width: 515px;
     margin: 2rem;
     padding: 40px;
-    border: 1px solid #D0D5DD;
-    box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1),
+        inset 0px -1px 0px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     background: #ffffff;
-    color: #1D2939;
+    color: #1d2939;
 }
 .add-course-form-header {
     display: flex;
@@ -332,12 +336,12 @@ tr:nth-child(even) {
     height: 40px;
 }
 .add-course-form-header .header-text {
-    font-family: 'Kanit';
+    font-family: "Kanit";
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 38px;
-    color: #1D2939;
+    color: #1d2939;
     margin-bottom: 5px;
 }
 .form__input-group {
@@ -362,12 +366,12 @@ tr:nth-child(even) {
 
 .form__button {
     width: 100%;
-    padding: 10px 18px; 
-    border: 1px solid #0052FC;
+    padding: 10px 18px;
+    border: 1px solid #0052fc;
     border-radius: 8px;
     outline: none;
     cursor: pointer;
-    background: #0052FC;
+    background: #0052fc;
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
 .form__button a {
@@ -410,9 +414,10 @@ tr:nth-child(even) {
     text-align: center;
     padding: 24px 16px;
     gap: 24px;
-    background: #FCFCFD;
-    border: 1px solid #D0D5DD;
-    box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+    background: #fcfcfd;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 3px rgba(11, 19, 36, 0.1),
+        inset 0px -1px 0px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
 }
 
